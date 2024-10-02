@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Circuito | Smurfs</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="module" src="../scripts/load_card.js"></script>
+    <script> 
+        $(function(){
+            $("#header").load("../header.html");
+            $("#footer").load("../footer.html");
+        });
+    </script> 
+</head>
+<body>
+    <div id="loader">
+        <div id="loader-inner"></div>
+    </div>
+    <header id="header"></header>
+    <main class="conteudo">
+        <section class="delimitador__conteudo">
+            <div class="titulo__conteudo__div">
+                <h1 class="titulo__conteudo__card"> Card do Circuito <span id="nome-circuito"></span> </h1>
+                <div class="container__historico__card">
+                    <a href="historico_modificacoes.html">
+                        <img class="logo_historico_card" src="../images/Histórico.png" alt="Seta em formato de relógio virada para a esquerda">
+                    </a>
+                </div>
+                <div class="container__botao" id="botao__card">
+                    <label class="toggle-switch" id="toggleSwitch">
+                        <input type="checkbox" id="switchCheckbox">
+                        <div class="toggle-switch-background">
+                            <div class="toggle-switch-handle">
+                                <i class="icon fas fa-pen"></i>
+                            </div>
+                        </div>
+                    </label>
+                </div>            
+                <div class="container__salvar">
+                    <button id="salvar" style="display: none;">Salvar</button>
+                </div>
+            </div>
+            <section class="section__conteudo__card">
+                <div class="coluna_flex_card_esq">
+                    <div class="titulo_tabela" id="info-gerais">
+                        <h3 class="subtitulo__conteudo__card"> INFORMAÇÕES PRINCIPAIS </h3>
+                        <p> <span>Contrato</span> <input type="text" value="" id="contrato" class="input_card" readonly></p>
+                        <p> <span>Circuito Antigo</span> <input type="text" value="" id="circuito_antigo" class="input_card" readonly></p>
+                        <p> <span>Novo Circuito</span> <input type="text" value="" id="circuito" class="input_card" readonly></p>
+                        <p> <span>Numero Antigo</span> <input type="text" value="" id="id_numero_antigo" class="input_card" readonly></p>
+                        <p> <span>Novo Numero</span> <input type="text" value="" id="id_numero_wfb" class="input_card" readonly></p>
+                        <p> <span>Origem</span> <input type="text" value="" id="tipo_de_os" class="input_card" readonly></p>
+                        <p> <span>Status</span> <input type="text" value="" id="status_circuito" class="input_card" readonly></p>
+                        <p> <span>Status Smurfs</span> <input type="text" value="" id="status_smurfs"class="input_card" readonly></p>
+                        <p> <span>Remessa</span> <input type="text" value="" id="remessa"class="input_card" readonly></p>
+                        <p> <span>Modalidade</span> <input type="text" value="" id="modalidade_migracao"class="input_card" readonly></p>
+                        <p> <span>Velocidade</span> <input type="text" value="" id="banda"class="input_card" readonly></p>
+                    </div>
+                
+                    <br>
+                    <div class="titulo_tabela" id="contato">
+                        <h3 class="subtitulo__conteudo__card"> CONTATO </h3>
+                        <p> <span> Nome do Beneficitário </span> <input type="text" value="" id="nome" class="input_card" readonly></p>
+                        <p> <span> Telefone do Beneficitário </span> <input type="text" value="" id="telefone" class="input_card" readonly></p>
+                        <p> <span> E-mail do Beneficitário </span> <input type="text" value="" id="email" class="input_card" readonly></p>
+                    </div>
+                    <br>
+                </div>
+                <div class="coluna_flex_card_dir">
+                    <div class="titulo_tabela" id="endereco">
+                        <h3 class="subtitulo__conteudo__card"> ENDEREÇO </h3>
+                        <p> <span> Estabelecimento </span> <input type="text" value="" id="nome_estabelecimento" class="input_card" readonly></p>
+                        <!-- <p> <span> INEP </span> <input type="text" value="" class="input_card" readonly></p> -->
+                        <p> <span> Tipologia </span> <input type="text" value="" id="tipo_estabelecimento" class="input_card" readonly></p>
+                        <p> <span> Solicitante </span> <input type="text" value="" id="solicitante" class="input_card" readonly></p>
+                        <!-- <p> <span> Instituição Responsável </span> <input type="text" class="input_card" value="" readonly></p> -->
+                        <p> <span> UF </span> <input type="text" value="" id="uf" class="input_card" readonly> </p>
+                        <p> <span> Município </span> <input type="text" value="" id="municipio" class="input_card" readonly> </p>
+                        <p> <span> Bairro </span> <input type="text" value="" id="bairro" class="input_card" readonly> </p>
+                        <p> <span> CEP </span> <input type="text" value="" id="cep" class="input_card" readonly> </p>
+                        <p> <span> Logradouro </span> <input type="text" value="" id="logradouro" class="input_card" readonly> </p>
+                        <p> <span> Número </span> <input type="text" value="" id="numero" class="input_card" readonly> </p>
+                        <!-- <p> <span> Lote </span> <input type="text" value="" class="input_card" readonly> </p> -->
+                        <p> <span> Complemento </span> <input type="text" value="" id="complemento" class="input_card" readonly> </p>
+                        <p> <span> Latitude </span> <input type="text" value="" id="latitude" class="input_card" readonly> </p>
+                        <p> <span> Longitude </span> <input type="text" value="" id="longitude" class="input_card" readonly> </p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer id="footer"></footer>
+</body>
+</html>

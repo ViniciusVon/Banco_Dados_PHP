@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Modificações | Smurfs</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="module" src="../scripts/historico_modificacoes.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("../header.html"); 
+          $("#footer").load("../footer.html"); 
+        });
+    </script> 
+</head>
+<body>
+    <div id="loader">
+        <div id="loader-inner"></div>
+    </div>
+    <header id="header" ></header>
+    <main class="conteudo">
+        <section class="delimitador__conteudo">
+            <h1 class="titulo__conteudo">Histórico de Modificações</h1>
+            <div class="cabecalho__conteudo">
+                <div class="cabecalho__pesquisa__conteudo">
+                    <a class="search-button" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <input type="text" class="search-txt" placeholder="Pesquisar...">
+                </div>
+                <div class="filtros">
+                    <input type="checkbox" class="checkbox__filtros" id="checkbox__filtros">
+                    <div class="btn__filtros">
+                        <i class="fa-solid fa-filter"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="filtros_atualizar_circuito" id="botoes__filtros">
+                <select onchange="" class="field-filtro" id="circuito">
+                    <option value="" selected>Circuitos</option>
+                </select>
+                <select onchange="" class="field-filtro" id="contrato">
+                    <option value="" selected>Contrato</option>
+                </select>
+                <select onchange="" class="field-filtro" id="status">
+                    <option value="" selected>Status</option>
+                </select>
+                <select onchange="" class="field-filtro" id="status_smurfs">
+                    <option value="" selected>Status Smurfs</option>
+                </select>
+                <select onchange="" class="field-filtro" id="remessa">
+                    <option value="" selected>Remessa</option>
+                </select>
+                <select onchange="" class="field-filtro" id="modalidade">
+                    <option value="" selected>Modalidade</option>
+                </select>
+                <select onchange="" class="field-filtro" id="uf">
+                    <option value="" selected>UF</option>
+                </select>
+                <select onchange="" class="field-filtro" id="municipio">
+                    <option value="" selected>Município</option>
+                </select>
+                <select onchange="" class="field-filtro" id="solicitante">
+                    <option value="" selected>Solicitante</option>
+                </select>
+                <select onchange="" class="field-filtro" id="tipologia">
+                    <option value="" selected>Tipologia</option>
+                </select>
+            </div> -->
+            <div class="conteudo__conteudo__corpo"> 
+                <div class="conteudo-card-home">
+                    <div class="tabela-container">
+                        <table border="0" id="tabela_home">
+                            <thead>
+                                <tr id="tabela_cabecalho">
+                                    <th>Usuario</th>
+                                    <th>Categoria</th>
+                                    <th>Última Modificação</th>
+                                    <th>Circuito</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data-output">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="a-text-center" role="navigation" id="pagination">
+                <ul class="a-pagination"></ul>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" ></footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/load_header.js"></script>
+</head>
+<body>
+    <header id="cabecalho__header">
+        <a href="https://www.telebras.com.br"> <!-- Relaciona a logo da Telebras com o site oficial -->
+            <img class="logo_telebras" src="../images/telebras_logo.png" alt="Foto Logo Telebras">
+        </a>
+        <p id="cabecalho__user">
+            <span id="usernameDisplay"></span>
+            <span class="cabecalho__logout"> | Logout </span>
+        </p>
+    </header>
+
+    <header class="navegacao">
+        <div class="container_gerenciamento" style="display: none;">
+            <a href="./gerenciar_acessos.html" class="gerenciamento__link">
+                <i class="fa-solid fa-user-pen"></i>
+            </a>
+        </div>
+        <nav class="navegacao__menu">
+            <a class="navegacao__menu__link" href="home.html">Consulta</a>
+            <a class="navegacao__menu__link" href="area_comercial.html">Informações Comerciais</a>
+            <a class="navegacao__menu__link" href="area_tecnica.html">Informações Técnicas</a>
+            <a class="navegacao__menu__link" href="subir_carga.html">Subir Carga</a>
+            <a class="navegacao__menu__link" href="atualizar_circuito.html">Atualizar Circuito</a>
+            <!-- <a class="navegacao__menu__link" href="historico_modificacoes.html">Histórico Modificações</a> -->
+        </nav>
+        <nav class="navegacao_mobile">
+            <div class="container_navegacao_mobile"> 
+                <input type="checkbox" id="checkbox">
+                <div class="linhas_hamburguer">
+                    <span class="linha linha1"></span>
+                    <span class="linha linha2"></span>
+                    <span class="linha linha3"></span>
+                </div>
+                <div class="menu_hamburguer">
+                    <ul class="conteudo_menu_hamburguer">
+                        <li><a class="navegacao__menu__link" href="home.html">Consulta</a></li>
+                        <li><a class="navegacao__menu__link" href="area_comercial.html">Área Comercial</a></li>
+                        <li><a class="navegacao__menu__link" href="area_tecnica.html">Área Técnica</a></li>
+                        <li><a class="navegacao__menu__link" href="subir_carga.html">Subir Carga</a></li>
+                        <li><a class="navegacao__menu__link" href="atualizar_circuito.html">Atualizar Circuito</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+    

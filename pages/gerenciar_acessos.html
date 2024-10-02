@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Acessos | Smurfs</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../scripts/gerenciar_acessos.js"></script>
+    <style>
+        /* Estilo para o ícone de caneta */
+        .logo_caneta {
+            cursor: pointer;
+        }
+        /* Estilo para a cor padrão do texto */
+        #span_usuario {
+            color: rgba(41, 86, 155, 1);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("../header.html");
+          $("#footer").load("../footer.html");
+        });
+        
+        // $(document).ready(function() {
+        //     $('#logo_caneta').click(function() {
+        //         var nomeAtual = $('#span_usuario').text(); // Obtém o texto atual do span
+
+        //         if (nomeAtual === 'nome.usuario') {
+        //             $('#span_usuario').text('administrador').css('color', 'rgba(41, 86, 155, 1)'); // Altera o texto e aplica a cor
+        //             $('#input_usuario').val('administrador').css('color', 'rgba(41, 86, 155, 1)'); // Altera o valor e aplica a cor
+        //         } else {
+        //             $('#span_usuario').text('nome.usuario').css('color', 'rgba(41, 86, 155, 1)'); // Altera o texto de volta e aplica a cor padrão
+        //             $('#input_usuario').val('nome.usuario').css('color', 'rgba(41, 86, 155, 1)'); // Altera o valor de volta e aplica a cor padrão
+        //         }
+        //     });
+        // });
+    </script> 
+</head>
+<body>
+    <div id="loader">
+        <div id="loader-inner"></div>
+    </div>
+    <header id="header">
+        <div class="container_gerenciamento">
+            <a href="gerenciar_acessos.html" class="gerenciamento__link">
+                <i id="logo_caneta" class="fas fa-user-pen logo_caneta"></i>
+            </a>
+        </div>
+    </header>
+    <main class="conteudo">
+        <section class="delimitador__conteudo">
+            <div class="titulo__conteudo__div">
+                <h1 class="titulo__conteudo__card">Gerenciar Acessos</h1>         
+                <div class="container__salvar">
+                    <button id="salvar" style="display: none;">Salvar</button>
+                </div>
+            </div>
+            <div class="conteudo-card-home">
+                <div class="tabela-container">
+                    <table border="0" id="tabela_gerenciamento">
+                        <thead>
+                            <tr id="tabela_cabecalho">
+                                <th>Usuário</th>
+                                <th>Perfil de Acesso</th>
+                            </tr>
+                            <tr></tr>
+                        </thead>
+                        <tbody id="data-output"></tbody>
+                        <tfooter><tr></tr></tfooter>
+                    </table>
+                </div>
+            </div>
+            <div class="a-text-center" role="navigation" id="pagination">
+                <ul class="a-pagination"></ul>
+            </div>
+            
+        </section>
+    </main>
+    <footer id="footer" ></footer>
+</body>
+</html>

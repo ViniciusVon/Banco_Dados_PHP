@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Telebras</title>
+  <link rel="stylesheet" href="./styles/style_login.css">
+  <link rel="icon" href="https://www.telebras.com.br/50anos/wp-content/uploads/2018/08/cropped-logo-telebras-192x192.png" sizes="192x192">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login Telebras</div>
+    </div>
+    <div class="form-container">
+      <div class="form-inner">
+        <form action="" class="login" method="post" id="loginForm">
+          <div class="field">
+            <input id="username" name="username" type="text" placeholder="Nome do Usuário" required>
+          </div>
+          <div class="field">
+            <input id="password" name="password" type="password" placeholder="Senha" required>
+          </div>
+          <input type="checkbox" id="rememberMe" name="rememberMe">
+          <label for="rememberMe">Permanecer Conectado</label>
+          <div id="resposta_erro" style="display: none;">
+            <p class="msg_erro">Usuário e/ou Senha errado(s)</p>
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login">
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./scripts/script_login.js"></script>
+  </div>
+</body>  
+</html>
